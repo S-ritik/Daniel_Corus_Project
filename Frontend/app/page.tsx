@@ -204,6 +204,11 @@ export default function Home() {
       setRunning(false);
     }, 1500);
   };
+  const handleApproachClick = (approachTitle: string) => {
+    if (approachTitle === "Approach 1") {
+      window.open("/hierarchical.html", "_blank");
+    }
+  };
 
   // Selected blocks display text
   const selectedBlocksText =
@@ -677,7 +682,8 @@ export default function Home() {
               {approaches.map((a, idx) => (
                 <div
                   key={idx}
-                  className={`bg-gradient-to-br ${a.color} p-6 rounded-2xl text-white shadow-2xl transform transition-all duration-300 hover:scale-105`}
+                  className={`bg-gradient-to-br ${a.color} p-6 rounded-2xl text-white shadow-2xl transform transition-all duration-300 hover:scale-105 cursor-pointer`}
+                  onClick={() => handleApproachClick(a.title)}
                 >
                   <div className="flex justify-between items-start mb-4">
                     <h4 className="font-bold text-xl">{a.title}</h4>
