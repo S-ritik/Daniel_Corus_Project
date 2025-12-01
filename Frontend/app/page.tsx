@@ -346,7 +346,7 @@ useEffect(() => {
       );
     } finally {
       setRunning(false);
-    }, 1500);
+    }
   };
 
   // Selected blocks display text
@@ -908,8 +908,7 @@ useEffect(() => {
                       window.open(fullPath, '_blank');
                     }
                   }}
-                  className={`bg-gradient-to-br ${a.color} p-6 rounded-2xl text-white shadow-2xl transform transition-all duration-300 hover:scale-105 ${a.visualizationFile ? 'cursor-pointer' : ''} cursor-pointer`}
-                  onClick={() => handleApproachClick(a.title)}
+                  className={`bg-gradient-to-br ${a.color} p-6 rounded-2xl text-white shadow-2xl transform transition-all duration-300 hover:scale-105 ${a.visualizationFile ? 'cursor-pointer' : ''}`}
                 >
                   <div className="flex justify-between items-start mb-4">
                     <h4 className="font-bold text-xl">{a.title}</h4>
